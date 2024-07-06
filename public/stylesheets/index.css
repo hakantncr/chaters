@@ -13,7 +13,6 @@ body {
     font-size: 14px;
     line-height: 1;
     padding: 20px;
-    background: #1F252D url("https://source.unsplash.com/random/1920x1080") no-repeat center fixed;
     background-size: cover;
 }
 body .modal {
