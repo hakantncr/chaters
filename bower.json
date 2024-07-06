@@ -1,0 +1,17 @@
+{
+  "name": "chaters",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Hakan <hakantuncer.software@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chat",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/hakantncr/chaters",
+  "dependencies": {
+    "angular": "^1.8.3"
+  }
+}
