@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const passportGoogle = require('../auth/google');
 
-// Login with google
+// Login
 router.get('/google', passportGoogle.authenticate(
     'google',
     {
-        scope: ['profile']
+        scope: ['profile'],
     }
 ));
 // login failure

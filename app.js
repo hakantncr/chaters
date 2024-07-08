@@ -11,8 +11,6 @@ const auth = require('./routes/auth');
 
 const app = express();
 
-console.log(process.env.NAME);
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
