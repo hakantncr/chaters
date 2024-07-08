@@ -5,8 +5,8 @@ append stylesheets
   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css')
 
 block content
-  div
-    .modal(ng-controller="indexController")
+  div(ng-controller="indexController")
+    .modal
       .modal__inner
         .modal__header
           h2 Welcome, please login.
