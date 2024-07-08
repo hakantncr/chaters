@@ -11,6 +11,7 @@ passport.use(new GoogleStrategy({
 }, ((accessToken, refreshToken, profile, done) => {
     const data = profile._json;
     console.log(data);
-})));
+  })
+));
 
 module.exports = passport;
