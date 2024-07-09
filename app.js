@@ -16,6 +16,10 @@ const app = express();
 
 const db = require('./helpers/db')();
 
+// middlewares
+const isAuthenticated = require('./middleware/isAuthenticated');
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -32,7 +36,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET_KEY,
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true, maxAge: 14 * 24 * 3600000 }
+  cookie: { maxAge: 14 * 24 * 3600000 }
 }));
 
 // passport.js
@@ -41,7 +45,7 @@ app.use(passport.session());
 
 app.use('/', index);
 app.use('/auth', auth);
-app.use('/chat', chat);
+app.use('/chat', isAuthenticated, chat);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
